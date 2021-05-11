@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BikeStore.Models.ProductCategoryModel>
+
+@{
+    ViewData["Title"] = ViewBag.Title;
+}
+
+@foreach (var item in Model)
+{
+    <div class="image-container">
+        <img class="body-image" src="~/Content/Categories/@item.Name@ViewBag.Img" />
+        <div class="image-text-centered image-text">
+            @Html.ActionLink(item.Name, item.Name)
+            <p>@item.Description</p>
+        </div>
+    </div>
+}

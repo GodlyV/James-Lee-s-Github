@@ -1,0 +1,104 @@
+﻿@model SearchResultModel
+@{
+    ViewData["Title"] = "Search";
+}
+    
+
+    <div class="container p-4">
+        <div class="p-3">
+            <h1>Not what you were looking for?</h1>
+            <h2>Try the advanced search!</h2>
+            <form asp-controller="Products" asp-action="AdvancedSearch" method="get">
+                <span>
+                    Category:
+                    <select asp-for="ProductCategoryId">
+                        <option value="">All</option>
+                        @foreach (var item in Model.categories)
+                        {
+                            <option value="@item.productCategoryId">@item.Name</option>
+                        }
+                    </select>
+                    Search Word:
+                    <input class="mr-sm-2" style="border-radius:.25rem;" type="search" placeholder="Search" name="searchString" id="searchString" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Advanced Search</button>
+                </span>
+
+            </form>
+            <hr />
+        </div>
+
+
+        <h1 class="cat-header">Search Results</h1>
+        <div class="cat-text">
+            @if (ViewBag.NoResults == null)
+            {
+                if (ViewBag.Empty == null)
+                {
+                    foreach (var item in Model.bikes)
+                    {
+
+                        <div class="body-link">
+                            @Html.ActionLink(item.ProductModel, "Details", new { id = item.ProductModelID })
+                        </div>
+                        <div class="body-text">
+                            <p>@item.Description</p>
+                        </div>
+                        <hr />
+                        <br />
+                    }
+                }
+                else
+                {
+                    <p>No results!</p>
+                }
+            }
+            else
+            {
+                <p>Nothing to search for!</p>
+            }
+        </div>
+        @{
+            var prevDisabled = ViewBag.Page <= 1 ? "invisible" : "";
+            var nextDisabled = ViewBag.Page >= ViewBag.MaxPage ? "invisible" : "";
+        }
+
+        @{
+            var start = ViewBag.Page - 2;
+            if (start < 1)
+                start = 1;
+
+            var end = start + 4;
+            if (ViewBag.MaxPage < end)
+            {
+                var numOver = end - ViewBag.MaxPage;
+                end = ViewBag.MaxPage;
+
+                start = start - numOver;
+
+                if (start < 1)
+                    start = 1;
+            }
+        }
+
+        <a asp-action="AdvancedSearch" class="btn @prevDisabled" asp-route-productCategoryId=@(ViewBag.CategoryId) asp-route-searchString="@ViewBag.SearchString" asp-route-page=@(ViewBag.Page - 1)>
+            <b><</b>
+        </a>
+
+        @for (int i = start; i <= end; i++)
+        {
+            var disabled = "";
+            if (ViewBag.MaxPage <= 1)
+                break;
+            if (i == ViewBag.Page)
+                disabled = "disabled";
+
+            <a asp-action="AdvancedSearch" class="btn @disabled" asp-route-productCategoryId=@(ViewBag.CategoryId) asp-route-searchString="@ViewBag.SearchString" asp-route-page=@(i)>
+                <b>@(i)</b>
+            </a>
+        }
+
+        <a asp-action="AdvancedSearch" class="btn @nextDisabled" asp-route-productCategoryId=@(ViewBag.CategoryId) asp-route-searchString="@ViewBag.SearchString" asp-route-page=@(ViewBag.Page + 1)>
+            <b>></b>
+        </a>
+    </div>
+

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<BikeStore.Models.ProductCategory>
+
+@{
+    ViewData["Title"] = "Bike Categories";
+}
+
+<div class="p-4">
+    <h1>Bike Types</h1>
+    <table>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Name, item.Name.Substring(0, item.Name.IndexOf(" ")))
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+
+

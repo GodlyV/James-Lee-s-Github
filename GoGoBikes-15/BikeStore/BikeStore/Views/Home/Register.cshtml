@@ -1,0 +1,86 @@
+﻿@model BikeStore.Models.Customer
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    .input-validation-error {
+        border: 1px solid #ff0000 !important;
+        background-color: #ffeeee !important;
+    }
+</style>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcLqMEUAAAAAF-PBDCVkJGhpFgrLaMVOCjibiHP"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LcLqMEUAAAAAF-PBDCVkJGhpFgrLaMVOCjibiHP', { action: 'homepage' }).then(function (token) {
+            document.getElementById("endForm").value = token;
+        });
+    });
+</script>
+
+<div class="container p-4">
+    <h1>Register</h1>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show border border-info" role="alert">
+            <strong><h4 class="alert-heading">Oops!</h4></strong>
+            <p>@ViewBag.ErrorMessage</p>
+            @if (ViewBag.ErrorHint != null)
+            {
+                <hr>
+                <p class="mb-0">@ViewBag.ErrorHint</p>
+            }
+        </div>
+    }
+    <hr />
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmailAddress" class="control-label"></label>
+                    <input asp-for="EmailAddress" class="form-control" />
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="control-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="reset" value="Reset" class="btn btn-danger" />
+                </div>
+                <input type="hidden" id="endForm" name="endForm" />
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,24 @@
+Server Name: 
+adventureworkslt2017gr15
+
+Server admin login:
+GoGoBikes	
+
+password:
+Password123
+
+
+
+Database Name:
+AdventureWorksLT2017gr15
+
+
+Server:
+adventureworkslt2017gr15((Us)EastUS)
+
+Current Client IP: 207.162.58.3
+
+
+Server Name:
+
+adventureworkslt2017gr15.database.windows.net

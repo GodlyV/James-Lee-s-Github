@@ -1,0 +1,179 @@
+﻿@using reCAPTCHA.MVC
+@model BikeStore.Models.ContactUs;
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<style>
+    .map-container-6 {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+
+    .map-container-6 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    tr {
+        text-align: center;
+    }
+
+    .input-validation-error {
+        border: 1px solid #ff0000 !important;
+        background-color: #ffeeee !important;
+    }
+</style>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcLqMEUAAAAAF-PBDCVkJGhpFgrLaMVOCjibiHP"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LcLqMEUAAAAAF-PBDCVkJGhpFgrLaMVOCjibiHP', { action: 'homepage' }).then(function (token) {
+                document.getElementById("endForm").value = token;
+            });
+    });
+</script>
+
+<div class="row mr-0 ml-0 pt-4">
+    <div class="col-3 mb-4 text-center">
+
+        <h1>Contact Us</h1>
+        <br />
+
+        <h4>Have any feedback? Let us know!</h4>
+
+        <p>Email: <a href="mailto:gogobikesstore@gmail.com" target="_blank">gogobikesstore@gmail.com</a></p>
+        <p>Phone Number: <a href="tel:123-456-7890">(123) 456-7890</a></p>
+        <p>Location: <a href="https://goo.gl/maps/s5fBGNBWgbkZ5BGx5" target="_blank"> 21275 Rue Lakeshore Road, Sainte-Anne-de-Bellevue</a></p>
+
+    </div>
+    <div class="col-3 mb-4 text-center">
+        <h2>Operating Hours</h2>
+        <table style="margin:auto;">
+            <tr>
+                <th>Day</th>
+                <th>Open</th>
+                <th>Close</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>9:00</td>
+                <td>17:00</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>9:00</td>
+                <td>17:00</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>9:00</td>
+                <td>17:00</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>9:00</td>
+                <td>17:00</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>8:00</td>
+                <td>19:00</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>8:00</td>
+                <td>19:00</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>10:00</td>
+                <td>15:00</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-6">
+
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6 border-info" style="height: 400px;border-style:solid;border-radius:16px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.142297158075!2d-73.94350578421768!3d45.406470045314386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc938500caad3a7%3A0xd807d74a59dcffcf!2sJohn%20Abbott%20College!5e0!3m2!1sen!2sca!4v1572413943109!5m2!1sen!2sca" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</div>
+<div class="row p-4">
+    <div class="col-6 text-center">
+        <div>
+            @if (ViewBag.Message == null)
+            {
+                <div>
+                    <form id="contact-us-form" action="?" method="post">
+                        <div>
+                            <label asp-for="FirstName">First Name</label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="LastName">Last Name</label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="PostalCode">Postal Code</label>
+                            <input asp-for="PostalCode" class="form-control" />
+                            <span asp-validation-for="PostalCode" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Email">Email</label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Subject" class="control-label"></label>
+                            <select asp-for="Subject" class="form-control">
+                                <option value="">Select topic</option>
+                                <option value="My Order">My order</option>
+                                <option value="Product Questions">Product questions</option>
+                                <option value="Customer Service & Feedback">Customer service and feedback</option>
+                                <option value="Technical Questions, Specifications, Geometry, Sizing, & Historical Information">Technical questions, specifications, geometry, sizing and historical information</option>
+                                <option value="Warranty">Warranty</option>
+                                <option value="Registration">Registration</option>
+                                <option value="Catalog Request">Catalogue requests</option>
+                                <option value="Owner's Manuals">Owner's manuals</option>
+                                <option value="Media Inquiries">Media enquiries</option>
+                                <option value="Sponsorship & Donation">Sponsorship and donations</option>
+                            </select>
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Phone">Phone Number</label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="QuestionsAndComments">Questions & Comments</label>
+                            <textarea rows="5" cols="15"
+                                      asp-for="QuestionsAndComments" class="form-control"></textarea>
+                            <span asp-validation-for="QuestionsAndComments" class="text-danger"></span>
+                        </div>
+                        <div class="pt-4">
+                            <button class="g-recaptcha-response btn btn-success" data-sitekey="6LcLqMEUAAAAAF-PBDCVkJGhpFgrLaMVOCjibiHP" data-callback='onSubmit'>Send</button>
+                            <button type="reset" class="btn btn-danger">Clear Form</button>
+                        </div>
+
+                        <input type="hidden" id="endForm" name="endForm" />
+                    </form>
+                </div>
+            }
+        </div>
+        <div>
+            @if (ViewBag.Message != null)
+            {
+                <div>@ViewBag.Message</div>
+            }
+        </div>
+    </div>
+</div>

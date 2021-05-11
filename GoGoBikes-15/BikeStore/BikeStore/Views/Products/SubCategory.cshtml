@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BikeStore.Models.BikeListModel>
+
+@{
+    ViewData["Title"] = ViewBag.Title;
+}
+<div class="container p-4">
+    <div>
+        <h1>@ViewBag.Title</h1>
+        <select>
+            <option value=12>12</option>
+            <option value=24>24</option>
+            <option value=48>48</option>
+        </select>
+    </div>
+    @if(Model.Count() == 0)
+    {
+        <h1>We appoligize, there are currently no products to display here.</h1>
+    }
+    @foreach (var item in Model)
+    {
+        <div>
+            @Html.ActionLink(item.ProductModel, "Details", new { id = item.ProductModelID })
+            <p>@item.Description</p>
+        </div>
+    }
+<div>
+    @{
+        var prevDisabled = ViewBag.Page <= 1 ? "invisible" : "";
+        var nextDisabled = ViewBag.Page >= ViewBag.MaxPage ? "invisible" : "";
+    }
+
+    @{
+        var start = ViewBag.Page - 2;
+        if (start < 1)
+            start = 1;
+
+        var end = start + 4;
+        if (ViewBag.MaxPage < end)
+        {
+            var numOver = end - ViewBag.MaxPage;
+            end = ViewBag.MaxPage;
+
+            start = start - numOver;
+
+            if (start < 1)
+                start = 1;
+        }
+    }
+
+    <a asp-action="@(ViewData["Title"].ToString().Replace(' ', '_').Replace('-', '_'))" class="btn @prevDisabled" asp-route-page="@(ViewBag.Page - 1)">
+        <b><</b>
+    </a>
+
+    @for (int i = start; i <= end; i++)
+    {
+        var disabled = "";
+        if (ViewBag.MaxPage <= 1)
+            break;
+        if (i == ViewBag.Page)
+            disabled = "disabled";
+
+        <a asp-action="@(ViewData["Title"].ToString().Replace(' ', '_').Replace('-', '_'))" class="btn @disabled" asp-route-page="@(i)">
+            <b>@(i)</b>
+        </a>
+    }
+
+    <a asp-action="@(ViewData["Title"].ToString().Replace(' ', '_').Replace('-', '_'))" class="btn @nextDisabled" asp-route-page="@(ViewBag.Page + 1)">
+        <b>></b>
+    </a>
+</div>
+</div>

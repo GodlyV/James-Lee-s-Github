@@ -1,0 +1,136 @@
+﻿@model BikeStore.Models.Product
+
+@{
+    ViewData["Title"] = "Product";
+}
+    <div class="container p-4">
+        <h1>Product Details</h1>
+        <hr />
+        <h4>
+            @Html.DisplayFor(model => model.Name)
+        </h4>
+        <hr />
+        <br />
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.ThumbNailPhoto))" width="280" height="240">
+                </dt>
+                <dd class="col-sm-10">
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ListPrice)
+                </dt>
+                @if (Model.OnSale == true)
+                {
+                    if (Model.Discount != 0)
+                    {
+                        <dd class="col-sm-10">
+                            <div>
+                                <span>
+                                    <del>@Html.Raw("$")@Html.DisplayFor(model => model.ListPrice)@Html.Raw(" CAD")</del>
+                                </span>
+                                <span class="text-danger font-weight-bold h6">
+                                    @Html.Raw("   $")@Html.DisplayFor(model => model.DiscountPrice)@Html.Raw(" CAD")
+                                </span>
+                            </div>
+                        </dd>
+                    }
+
+                }
+                else
+                {
+            <dd class="col-sm-10">
+                $@Html.DisplayFor(model => model.ListPrice)@Html.Raw(" CAD")
+            </dd>
+                }
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                @if (Model.Description != null)
+                {
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
+                }
+                else
+                {
+                    <dd class="col-sm-10">
+                        N/A
+                    </dd>
+                }
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ProductNumber)
+                </dt>
+                @if (Model.ProductNumber != null)
+                {
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.ProductNumber)
+                    </dd>
+                }
+                else
+                {
+                    <dd class="col-sm-10">
+                        N/A
+                    </dd>
+                }
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Color)
+                </dt>
+                @if (Model.Color != null)
+                {
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Color)
+                    </dd>
+                }
+                else
+                {
+                    <dd class="col-sm-10">
+                        N/A
+                    </dd>
+                }
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Size)
+                </dt>
+                @if (Model.Size != null)
+                {
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Size)
+                        @if (ViewBag.isNumSize != null)
+                        {
+                            @Html.Raw("\"");
+                        }
+                    </dd>
+                }
+                else
+                {
+                    <dd class="col-sm-10">
+                        N/A
+                    </dd>
+                }
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Weight)
+                </dt>
+                @if (Model.Weight != null)
+                {
+                    <dd class="col-sm-10">
+                        @String.Format("{0:N}", (ViewBag.Weight / 1000)) kg
+                    </dd>
+                }
+                else
+                {
+                    <dd class="col-sm-10">
+                        N/A
+                    </dd>
+                }
+
+            </dl>
+        </div>
+    </div>
+    

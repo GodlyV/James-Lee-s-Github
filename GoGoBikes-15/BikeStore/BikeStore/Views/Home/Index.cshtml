@@ -1,0 +1,187 @@
+﻿@model IEnumerable<BikeStore.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<style>
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: initial;
+    }
+
+    .carousel-item a:hover {
+        color: darkgray !important;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 75px;
+        height: 50px;
+    }
+</style>
+@if (TempData["Login"] != null)
+{
+    <div class="alert alert-success border border-dark pt-4" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>You've succesfully logged in!</p>
+        <hr>
+        <p class="mb-0">Feel free to contact us if you have any questions!</p>
+    </div>
+}
+@if (TempData["Registered"] != null)
+{
+    <div class="alert alert-success border border-dark pt-4" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>You've succesfully created a new account!</p>
+        <hr>
+        <p class="mb-0">Feel free to contact us if you have any questions!</p>
+    </div>
+}
+
+<div id="BikeCategories" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#BikeCategories" data-slide-to="0" class="active"></li>
+        <li data-target="#BikeCategories" data-slide-to="1"></li>
+        <li data-target="#BikeCategories" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeTypes/bike_mountain.jpg" alt="Mountain Bikes">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Mountain_Bikes">
+                    <p class="h1">Mountain</p>
+                    <p class="h3">Designed for off-road cycling.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeTypes/bike_road.jpg" alt="Road Bikes">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Road_Bikes">
+                    <p class="h1">Road</p>
+                    <p class="h3">Designed for paved road cycling.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeTypes/bike_touring.jpg" alt="Touring Bikes">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Touring_Bikes">
+                    <p class="h1">Touring</p>
+                    <p class="h3">Designed for bicycle touring.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#BikeCategories" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#BikeCategories" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+@if (Model != null)
+{
+    <!--TODO add on-sale.jpg to background-->
+    <div class="container border-success rounded border-warning">
+        <h3 class="text-center">Items On Sale!</h3>
+        <div class="row">
+            <div class="col-1"></div>
+            @foreach (var item in Model)
+            {
+
+                <div class="col border rounded">
+                    <div class="thumbnail">
+                        <a class="nav-link text-dark h3" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="@item.ProductId" )>
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.ThumbNailPhoto))" class="border" style="width:70%; display: block; margin-left:auto; margin-right:auto; ">
+                            <div class="caption">
+                                <p class="text-center">@Html.DisplayFor(modelItem => item.Name)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            }
+            <div class="col-1"></div>
+        </div>
+        <br />
+    </div>
+}
+
+<div id="productCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#productCarousel" data-slide-to="1"></li>
+        <li data-target="#productCarousel" data-slide-to="2"></li>
+        <li data-target="#productCarousel" data-slide-to="3"></li>
+        <li data-target="#productCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeModels/mountain-100-black.jpg" alt="Mountain-100 Black">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="778">
+                    <p class="h1">Mountain-100 Black</p>
+                    <p class="h3">Speed through the hills.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeModels/road-250-black.jpg" alt="Road-250 Black">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="793">
+                    <p class="h1">Road-250 Black</p>
+                    <p class="h3">Lightweight yet sturdy.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeModels/touring-2000-blue.jpg" alt="Touring-2000 Blue">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="972">
+                    <p class="h1">Touring-2000 Blue</p>
+                    <p class="h3">Explore in maximum comfort.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeModels/touring-3000-yellow.jpg" alt="Touring-3000 Yellow">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="963">
+                    <p class="h1">Touring-3000 Yellow</p>
+                    <p class="h3">Wider, safer tires.</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="~/Content/BikeModels/road-350-w-yellow.jpg" alt="Road-350-W Yellow">
+            <div class="carousel-caption d-none d-md-block">
+                <a class="nav-link text-light h1 image-text" style="display:inline-block" asp-area="" asp-controller="Products" asp-action="Product" asp-route-id="976">
+                    <p class="h1">Road-350-W Yellow</p>
+                    <p class="h3">Sleek, aerodynamic, precise.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>

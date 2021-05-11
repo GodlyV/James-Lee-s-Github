@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BikeStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Compare";
+}
+
+    <div class="container p-4">
+        <h1>Comparing Products</h1>
+        <hr />
+        <div class="row">
+           @foreach (var product in Model)
+            {
+                <div class="col">
+                    <div>
+                        @if (product.ThumbNailPhoto != null)
+                        {
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(product.ThumbNailPhoto))">
+                        }
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.ListPrice):</span>
+                        $@Html.DisplayFor(model => product.ListPrice)
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.Description):</span>
+                        @if (product.Description != null)
+                        {
+                            @Html.DisplayFor(model => product.Description)
+                        }
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.ProductNumber):</span>
+                        @if (product.ProductNumber != null)
+                        {
+                            @Html.DisplayFor(model => product.ProductNumber)
+                        }
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.Color):</span>
+                        @if (product.Color != null)
+                        {
+                            @Html.DisplayFor(model => product.Color)
+                        }
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.Size):</span>
+                        @if (product.Size != null)
+                        {
+                            @Html.DisplayFor(model => product.Size)
+                        }
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">@Html.DisplayNameFor(model => model.Weight):</span>
+                        @if (product.Weight != null)
+                        {
+                            <div style="display:inline">
+                                @String.Format("{0:N}", (product.Weight / 1000))kg
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            }
+        </div>       
+    </div>
+

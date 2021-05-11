@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-signin-client_id" content="677833435207-g123i31e8fcc8a7h12q1vp1oc51f52br.apps.googleusercontent.com">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GoGoBikes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="/Content/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Content/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Content/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Content/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Content/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Content/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Content/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Content/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Content/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/Content/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Content/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/Content/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Content/favicon-16x16.png">
+    <link rel="manifest" href="/Content/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/Content/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl fixed-top mb-3 navbar-toggleable-m navbar-dark bg-dark border-bottom box-shadow border-info">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                                <img class="headerlogo" src="~/Content/bicycle_logo.png" title="Bikes" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GoGoBikes</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                    </ul>
+                    <div class="dropdown bg-dark">
+                        <button class="btn dropdown-toggle font-weight-light text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                        </button>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="Categories">Categories</a>
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="Bikes">Bikes</a>
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="Components">Components</a>
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="Clothing">Clothing</a>
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="Accessories">Accessories</a>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Products" asp-action="SpecialOffers">Special Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Home" asp-action="Safety">Safety</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        @if (User.Claims.Where(r => r.Type == "Role").Select(c => c.Value).SingleOrDefault() == "Admin")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light font-weight-light btn btn-danger text-light ml-1 mr-1" asp-area="" asp-controller="Products" asp-action="Admin">Admin</a>
+                            </li>
+                        }
+
+                    </ul>
+
+                    <div class="dropdown bg-dark">
+                        <button class="btn dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @if(User?.Identity?.IsAuthenticated ?? false)
+                            {
+                                <span>Hello, @User.Claims.Where(r => r.Type == "Name").Select(c => c.Value).SingleOrDefault()@User.Identity.Name</span>
+                            }
+                            else 
+                            {
+                                <span>Account</span>
+                            }
+                            
+                        </button>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                            @if (User?.Identity?.IsAuthenticated ?? false)
+                            {
+                                <a class="nav-link text-light font-weight-light btn btn-danger text-light ml-1 mr-1" href="/signout?returnUrl=%2F">Sign out</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link btn btn-primary text-light ml-1 mr-1" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+                                <a class="nav-link btn btn-warning text-dark ml-1 mr-1" asp-area="" asp-controller="Authentication" asp-action="SignIn">Login</a>
+                                <a class="nav-link btn btn-secondary text-light ml-1 mr-1" asp-area="" asp-controller="Home" asp-action="RecoverPassword">Recovery</a>
+                            }
+                        </div>
+                    </div>
+                    
+
+                    <form class="form-inline my-2 my-lg-0 has-search" asp-controller="Products" asp-action="Search" method="get">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="searchString" id="searchString" aria-label="Search">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="spacer"></div>
+    <div class="container">
+        <main role="main" class="container mt-5">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="footer font-small blue text-light bg-dark">
+        <div class="container-fluid text-center p-4  bg-dark">
+            <div class="row pl-5 pr-5">
+                <div class="col mt-md-0 text-left">
+                    <h4 class="text-uppercase font-weight-bold">Contact Us</h4>
+                    <p><img class="pr-1" src="~/Content/mail-icon-light.png" alt="Email:" height="16" width="22" /><a href="mailto:gogobikesstore@gmail.com" target="_blank"> gogobikesstore@gmail.com</a></p>
+                    <p><img class="pr-1" src="~/Content/phone-icon-light.png" alt="Phone Number:" height="22" width="16" /><a href="tel:123-456-7890">(123) 456-7890</a></p>
+                    <p><img class="pr-1" src="~/Content/ping-icon-light.png" alt="Location:" height="22" width="16" /><a href="https://goo.gl/maps/s5fBGNBWgbkZ5BGx5" target="_blank"> 21275 Rue Lakeshore Road, <br />Sainte-Anne-de-Bellevue</a></p>
+                    <p><img class="pr-1" src="~/Content/clock-icon-light.png" alt="Opening Hours:" height="21" width="19" /> Opening Hours:<br />Monday - Thursday: 9:00 - 17:00<br />Friday - Saturday: 8:00 - 19:00<br />Sunday: 10:00 - 15:00</p>
+                </div>
+
+                <div class="col mb-md-0 mb-3 text-left">
+                    <h4 class="text-uppercase font-weight-bold">Shop</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="" asp-area="" asp-controller="Products" asp-action="Categories">All Categories</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Products" asp-action="Bikes">Bikes</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Products" asp-action="Components">Components</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Products" asp-action="Clothing">Clothing</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Products" asp-action="Accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-md-0 mb-3 text-left">
+                    <h4 class="text-uppercase font-weight-bold">Support and Legal</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Home" asp-action="Safety">Safety</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Home" asp-action="Returns">Return and Refund Policy</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="font-italic text-muted mb-0">&copy; Copyrights gogobikes.vision All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
