@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b65a2e2-9cac-490b-be38-6ba0b62ed2ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFS.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/BFS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/terrain4.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/terrain8.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Search.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>-ian</find>
+      <find>se</find>
+      <find>system.</find>
+      <find>previous</find>
+      <find>stout</find>
+      <find>stdout</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/assets/README.txt" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/AStar.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFSRecursive.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/animation/Sequence.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Memory.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Algorithn.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Algorithm.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Evaluate.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/RandomSearch2.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/sprite/IanSprite.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/UnknownAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Queue.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/RandomSearch.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Search.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Main.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/generator/Generator.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/Location.java" />
+        <option value="$PROJECT_DIR$/asg3-starter-2/src/ca/qc/johnabbott/cs406/search/DFS.java" />
+        <option value="$PROJECT_DIR$/res/config.properties" />
+        <option value="$PROJECT_DIR$/res/terrain1.properties" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFS.java" />
+        <option value="$PROJECT_DIR$/res/terrain8.properties" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/BFS.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-85" />
+    <option name="y" value="124" />
+    <option name="width" value="2747" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552968059867" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ca.qc.johnabbott.cs406.search" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Terrain 1">
+    <list>
+      <item itemvalue="Application.Random" />
+      <item itemvalue="Application.Terrain 1" />
+      <item itemvalue="Application.Terrain 2" />
+      <item itemvalue="Application.Terrain 3" />
+      <item itemvalue="Application.Terrain 4" />
+      <item itemvalue="Application.Terrain 5" />
+      <item itemvalue="Application.Terrain 6" />
+      <item itemvalue="Application.Terrain 7" />
+      <item itemvalue="Application.Terrain 8" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b65a2e2-9cac-490b-be38-6ba0b62ed2ab" name="Default Changelist" comment="" />
+      <created>1550962677806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550962677806</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Evaluate - 2019.02.24 at 09h 03m 25s.xml">
+      <configuration name="Evaluate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Evaluate - 2019.02.24 at 09h 04m 06s.xml">
+      <configuration name="Evaluate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Evaluate - 2019.02.24 at 09h 04m 52s.xml">
+      <configuration name="Evaluate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Evaluate - 2019.02.24 at 09h 05m 26s.xml">
+      <configuration name="Evaluate" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2196162" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299539" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49729145" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3164557" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32911393" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="terrain.isBlocked(next)" language="JAVA" />
+        <watch expression="memory.getColor(next)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>memory.getColor(next)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>terrain.isBlocked(next)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/sprite/IanSprite.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/animation/Animated.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/animation/Constant.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/GraphicalTerrain.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/Step.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/TerrainDrawable.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/RandomSearch2.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/graphics/animation/Sequence.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Algorithm.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Queue.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/QueueOverflowException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/QueueUnderflowException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Stack.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/StackOverflowException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/StackUnderflowException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Traversable.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/TraversalException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/TerrainBoundsException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/TerrainFileException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/Token.java" />
+    <entry file="file://$PROJECT_DIR$/doc/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/Location.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/RandomSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/UnknownAlgorithm.java" />
+    <entry file="file://$PROJECT_DIR$/asg3-starter-2/res/terrain1.properties" />
+    <entry file="file://$PROJECT_DIR$/asg3-starter-2/res/terrain2.properties" />
+    <entry file="file://$PROJECT_DIR$/asg3-starter-2/res/terrain4.properties" />
+    <entry file="file://$PROJECT_DIR$/asg3-starter-2/src/ca/qc/johnabbott/cs406/collections/Stack.java" />
+    <entry file="file://$PROJECT_DIR$/asg3-starter-2/src/ca/qc/johnabbott/cs406/search/DFS.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/Terrain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="393" column="32" selection-start-line="393" selection-start-column="32" selection-end-line="393" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terrains/terrain2.txt" />
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/terrain/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terrains/terrain3.txt" />
+    <entry file="file://$PROJECT_DIR$/res/terrain3.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain5.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain6.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain7.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/BFS.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="163" column="34" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/asg3/config.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/generator/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/BFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain4.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/terrain8.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/DFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/search/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>asg3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Random" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="ca.qc.johnabbott.cs406.Main" />
+    <module name="asg3" />
+    <option name="PROGRAM_PARAMETERS" value="config.properties" />
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
