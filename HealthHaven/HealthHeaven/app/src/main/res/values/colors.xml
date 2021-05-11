@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#000000</color>
+    <color name="darkGrayAccent">#212121</color>
+    <color name="paletteRed">#C73866</color>
+    <color name="paletteSalmon">#FE676E</color>
+    <color name="paletteOrange">#FD8F52</color>
+    <color name="paletteLightOrange">#FFBD71</color>
+    <color name="paletteBeige">#FFDCA2</color>
+
+    <color name="pieChartBlue">#3498DB</color>
+    <color name="pieChartGreen">#2ECC71</color>
+    <color name="pieChartRed">#E74C3C</color>
+    <color name="pieChartYellow">#f1c40f</color>
+    <color name="turquoise">#43e8d7</color>
+
+    <color name="base0E">#AE81FF</color>
+    <color name="base0C">#A1EFE4</color>
+    <color name="base0B">#A6E22E</color>
+    <color name="base09">#FD971F</color>
+
+</resources>

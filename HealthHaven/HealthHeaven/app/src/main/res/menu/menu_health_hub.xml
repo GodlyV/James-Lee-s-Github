@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ca.qc.johnabbott.cs616.healthhaven.ui.HealthCenter.HealthCenter">
+    <item
+        android:id="@+id/reset_MenuItem"
+        android:title="Refresh"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sync_MenuItem"
+        android:title="Sync"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/addLog_MenuItem"
+        android:title="New"
+        app:showAsAction="always" />
+</menu>

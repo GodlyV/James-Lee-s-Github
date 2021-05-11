@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/medicalID_MenuItem"
+        android:icon="@drawable/ic_account_box_white_48dp"
+        android:title="ID"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/emergency_MenuItem"
+        android:icon="@drawable/ic_star_white_48dp"
+        android:title="Contacts"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/reminder_MenuItem"
+        android:icon="@drawable/ic_event_white_48dp"
+        android:title="Reminders"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/health_MenuItem"
+        android:icon="@drawable/ic_sentiment_very_satisfied_white_48dp"
+        android:title="Health"
+        app:showAsAction="always" />
+</menu>
